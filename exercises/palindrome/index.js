@@ -7,6 +7,15 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+  // reverse the string and compare the reversed string to the original string - return false if they don't match at any spot
+    // const reversed = str.split("").reverse().join("");
+    // return str === reversed;
+
+  // use array helper every() - not ideal solution because it loops through full array when only need to go through half of array
+    return str.split("").every((char, index) => {
+      return char === str[str.length - index - 1];
+    })
+}
 
 module.exports = palindrome;
