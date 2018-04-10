@@ -26,26 +26,26 @@ class Queue {
 
   remove(){
     while (this.first.peek()) {
-      const record = this.first.pop();
-      this.second.push(record);
+      this.second.push(this.first.pop());
     }
+    
     const record = this.second.pop();
+    
     while (this.second.peek()) {
-      const record = this.second.pop();
-      this.first.push(record);
+      this.first.push(this.second.pop());
     }
     return record;
   }
 
   peek() {
     while (this.first.peek()) {
-      const record = this.first.pop();
-      this.second.push(record);
+      this.second.push(this.first.pop());
     }
+    
     const record = this.second.peek();
+    
     while (this.second.peek()) {
-      const record = this.second.pop();
-      this.first.push(record);
+      this.first.push(this.second.pop());
     }
     return record;
   }
