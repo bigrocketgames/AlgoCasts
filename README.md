@@ -1,1 +1,2 @@
 # AlgoCasts
+- To run a test. Go to the exercises directory and type 'jest [folder name]' and the tests will run.  Or type 'jest [folder name] --watch' to keep them running when changes are made to your code.
